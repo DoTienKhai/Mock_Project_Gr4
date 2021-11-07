@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { HomeRoutingModule } from './home.routing.module';
-import { TagListComponent } from './tag-list/tag-list.component';
-import { ArticlesListComponent } from './articles-list/articles-list.component';
+import {ArticleListComponent} from "./article-list/article-list.component";
+import {TagComponent} from "./tag/tag.component";
 
- 
+
+
 @NgModule({
   declarations: [
-    TagListComponent,
-    ArticlesListComponent
+    ArticleListComponent,
+    TagComponent
   ],
   imports: [
     HomeRoutingModule,
   ],
   providers: [],
+  exports: [
+    TagComponent,
+    ArticleListComponent
+  ]
 })
 export class HomeModule { }
