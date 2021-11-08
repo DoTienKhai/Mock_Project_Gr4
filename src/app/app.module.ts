@@ -6,8 +6,11 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from "./shared/header/header.component";
 import {FooterComponent} from "./shared/footer/footer.component";
 import {HomeModule} from "./HomeModule";
-import {HomeComponent} from "./HomeModule/home.component";
+import { HomeComponent } from './HomeModule/home.component';
 import { EditorModule } from './EditorModule/editor.module';
+
+
+
 
 
 @NgModule({
@@ -35,10 +38,8 @@ import { EditorModule } from './EditorModule/editor.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
-    EditorModule,
-
-    HomeModule
+    HomeModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
