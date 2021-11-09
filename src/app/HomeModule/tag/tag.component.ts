@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ArticleListService} from "../../core/services/articles/article-list.service";
 
 @Component({
   selector: 'app-tag',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tag.component.scss']
 })
 export class TagComponent implements OnInit {
+  tagLists: string[] = [];
 
-  constructor() { }
+  constructor(private articleListService: ArticleListService) {
+  }
 
   ngOnInit(): void {
+    this.articleListService.getTagLists().then(data => this.tagLists = data);
   }
 
 }

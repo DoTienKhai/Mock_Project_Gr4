@@ -1,64 +1,16 @@
 <div class="container-fluid">
   <div class="list-article">
     <div class="row">
-      <div class="col-sm-6 col-md-6 col-lg-3 text-center mb-4">
+      <div class="col-sm-6 col-md-6 col-lg-3 text-center mb-4" *ngFor="let article of articles">
+        <h4 class="mt-3"><a href="" class="article-title text-dark">{{article.title}}</a></h4>
         <img class="img-article"
-             src="https://tin247.com.vn/wp-content/uploads/2019/12/18_999-hinh-nen-tai-mien-phi-full-hd-1920x1080-dep-2k-4k-8k-da-chu-de.jpg"
+             [src]="article.author.image"
              alt="" style="width: 100%">
-        <h4 class="mt-3"><a href="" class="article-title text-dark">Yêu Đừng Sợ Đau (Frexs Remix)</a></h4>
         <p class="article-detail">
-          Yêu Đừng Sợ Đau (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ Yêu Đừng Sợ Đau
-          (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ
+          {{article.description}}
         </p>
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-3 text-center mb-4">
-        <img class="img-article"
-             src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-             alt="" style="width: 100%">
-        <h4 class="mt-3"><a href="" class="article-title text-dark">Yêu Đừng Sợ Đau (Frexs Remix)</a></h4>
-        <p class="article-detail">
-          Yêu Đừng Sợ Đau (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ Yêu Đừng Sợ Đau
-          (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ
-        </p>
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-3 text-center mb-4">
-        <img class="img-article"
-             src="https://thuthuatnhanh.com/wp-content/uploads/2020/09/hinh-nen-full-hd-1920x1080-cho-may-tinh.jpg"
-             alt="" style="width: 100%">
-        <h4 class="mt-3"><a href="" class="article-title text-dark">Yêu Đừng Sợ Đau (Frexs Remix)</a></h4>
-        <p class="article-detail">
-          Yêu Đừng Sợ Đau (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ Yêu Đừng Sợ Đau
-          (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ
-        </p>
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-3 text-center mb-4">
-        <img class="img-article"
-             src="https://anhnendep.net/wp-content/uploads/2018/10/top-50-hinh-nen-Full-HD-1080-dep-nhat-10.jpg"
-             alt="" style="width: 100%">
-        <h4 class="mt-3"><a href="" class="article-title text-dark">Yêu Đừng Sợ Đau (Frexs Remix)</a></h4>
-        <p class="article-detail">
-          Yêu Đừng Sợ Đau (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ Yêu Đừng Sợ Đau
-          (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ
-        </p>
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-3 text-center mb-4">
-        <img class="img-article"
-             src="https://allimages.sgp1.digitaloceanspaces.com/photographercomvn/2021/01/1610770549_Download-hinh-nen-may-tinh-Full-HD-do-phan-giai.jpg"
-             alt="" style="width: 100%">
-        <h4 class="mt-3"><a href="" class="article-title text-dark">Yêu Đừng Sợ Đau (Frexs Remix)</a></h4>
-        <p class="article-detail">
-          Yêu Đừng Sợ Đau (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ Yêu Đừng Sợ Đau
-          (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ
-        </p>
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-3 text-center mb-4">
-        <img class="img-article"
-             src="https://anhnendep.net/wp-content/uploads/2018/10/top-50-hinh-nen-Full-HD-1080-dep-nhat-10.jpg"
-             alt="" style="width: 100%">
-        <h4 class="mt-3"><a href="" class="article-title text-dark">Yêu Đừng Sợ Đau (Frexs Remix)</a></h4>
-        <p class="article-detail">
-          Yêu Đừng Sợ Đau (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ Yêu Đừng Sợ Đau
-          (Frexs Remix) - Ngô Lan Hương - Đừng Quay Mặt Đi Nước Mắt Rơi Thì Cứ
+        <p>
+          Date created: {{article.createdAt | date: 'short'}}
         </p>
       </div>
     </div>

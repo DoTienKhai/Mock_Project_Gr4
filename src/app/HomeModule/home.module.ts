@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { HomeRoutingModule } from './home.routing.module';
 import {ArticleListComponent} from "./article-list/article-list.component";
 import {TagComponent} from "./tag/tag.component";
+import {CommonModule} from "@angular/common";
 
 
 
@@ -12,6 +13,7 @@ import {TagComponent} from "./tag/tag.component";
   ],
   imports: [
     HomeRoutingModule,
+    CommonModule,
   ],
   providers: [],
   exports: [
