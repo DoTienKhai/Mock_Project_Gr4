@@ -1,0 +1,43 @@
+<div class="container-fluid" *ngIf="userProfile?.username">
+    <div class="profile text-center">
+        <div class="before">
+            <img [src]="userProfile.image" alt="">
+        </div>
+        <div class="main text-center">
+            <img [src]="userProfile.image" class="user-img" />
+            <h3>{{userProfile.username}}</h3>
+            <ng-template *ngIf="userProfile.bio ;else noBio">
+                <p>{{userProfile.bio}}</p>
+            </ng-template>
+            <ng-template #noBio>
+                <p class="text-primary"> 
+                    <a [routerLink]="['/setting']" routerLinkActive="active" >Add your Bio</a> </p>
+            </ng-template>
+        </div>
+        
+        <!-- <app-follow-button *ngIf="!(currentUsername==userProfile.username)" [profile]="profile"></app-follow-button> -->
+
+    </div>
+    <div class="list-article">
+        <div class="pt-4 px-5 d-flex justify-content-between">
+            <ul class="">
+                <li class="">
+                    <a [routerLink]="['/profile', userProfile.username,'author']" 
+                    routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" >
+                    My Articles</a>
+                </li>
+                <li class="">
+                    <a [routerLink]="['/profile', userProfile.username,'favorited']" 
+                    routerLinkActive="active" >Favorited Articles</a>
+                </li>
+            </ul>
+            <div class="edit">
+                <a *ngIf="userProfile.username==currentUser?.username" routerLink="/setting"
+                    routerLinkActive="active" class="rounded">
+                <i class="fas fa-pen"></i>&nbsp; Edit your Profile </a>
+            </div>
+        </div>
+        <app-list-article></app-list-article> 
+    </div>
+</div>
+    

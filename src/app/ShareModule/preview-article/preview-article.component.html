@@ -1,0 +1,28 @@
+<div class="header">
+    <a [routerLink]="['/profile/', article.author.username]">
+        <img [src]="article.author.image" class="avatar"/>
+    </a>
+    <div class="info">
+        <a [routerLink]="['/profile/', article.author.username]" class="author">{{article.author.username}}</a>
+        <span class="date">{{article.createdAt|date: 'mediumDate'}}</span>
+    </div>    
+</div>
+<div class="main">
+    <h1>{{article.title}}</h1>
+    <p>{{article.description}}</p>
+    <ul class="tag-list">
+        <li class="tag-default tag-pill tag-outline" *ngFor="let tag of article.tagList">{{tag}}</li>
+    </ul>
+    <a [routerLink]="['/articles/', article.slug]">See more...</a>
+    <div class="d-flex justify-content-between">
+        <p><i class="far fa-thumbs-up"></i>&nbsp;{{article.favoritesCount}}</p>
+        <p>{{article?.comments?.length}}</p>
+    </div>
+</div> 
+
+<!-- <div class="feed-like">
+    <div class="d-flex justify-content-around border-top border-bottom">
+        <p><i class="far fa-thumbs-up"></i>&nbsp;Like</p>
+        <p><i class="far fa-comment-alt"></i>Comment</p>
+    </div>
+</div> -->
